@@ -22,9 +22,6 @@
     document.querySelectorAll('[data-de][data-en]').forEach((element) => {
       element.innerHTML = element.dataset[language];
     });
-    document.querySelectorAll('[data-aria-de][data-aria-en]').forEach((element) => {
-      element.setAttribute('aria-label', element.dataset[`aria${language.charAt(0).toUpperCase()}${language.slice(1)}`]);
-    });
     langButtons.forEach((button) => {
       button.setAttribute('aria-pressed', String(button.dataset.setLang === language));
     });
